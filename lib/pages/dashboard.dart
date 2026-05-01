@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan5.dart';
 import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan6.dart';
-// import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan7.dart';
+import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan7.dart';
 // import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan8.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -18,12 +18,12 @@ class DashboardPage extends StatelessWidget {
       "color": Colors.green,
       "page": CheckboxPage(),
     },
-    // {
-    //   "title": "Pertemuan 7",
-    //   "icon": Icons.auto_stories,
-    //   "color": Colors.orange,
-    //   "page": RadiobuttonPage(),
-    // },
+    {
+      "title": "Pertemuan 7",
+      "icon": Icons.auto_stories,
+      "color": Colors.orange,
+      "page": RadiobuttonPage(),
+    },
     // {
     //   "title": "Pertemuan 8",
     //   "icon": Icons.auto_stories,
