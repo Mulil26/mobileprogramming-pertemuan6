@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class SimpleAppBar extends StatelessWidget {
   const SimpleAppBar({Key? key}) : super(key: key);
 
@@ -16,17 +17,18 @@ class SimpleAppBar extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          leading: const Icon(Icons.menu),
-          title: const Text("Pertemuan 10"),
+          leading:  Icon(Icons.menu),
+          title:  Text("Pertemuan 10"),
           centerTitle: true,
-          actions: const [
+          actions:  [
             Icon(Icons.search),
           ],
           backgroundColor: Colors.red,
           flexibleSpace: Container(
-            decoration: const BoxDecoration(
+            decoration:  BoxDecoration(
               gradient: LinearGradient(
-                colors: [Colors.blue, Colors.lightBlue],
+                colors: [Colors.blue,
+                  Colors.lightBlue],
                 begin: Alignment.bottomRight,
                 end: Alignment.topLeft,
               ),
