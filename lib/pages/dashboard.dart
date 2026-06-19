@@ -5,6 +5,7 @@ import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan7.dart';
 import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan8.dart';
 import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan9.dart';
 import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan10.dart';
+import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan13.dart';
 
 
 class DashboardPage extends StatelessWidget {
@@ -44,6 +45,12 @@ class DashboardPage extends StatelessWidget {
       "icon": Icons.auto_stories,
       "color": Colors.green,
       "page": SimpleAppBar(),
+    },
+    {
+      "title": "Pertemuan 13",
+      "icon": Icons.auto_stories,
+      "color": Colors.red,
+      "page": AudioVideo(),
     },
   ];
 
