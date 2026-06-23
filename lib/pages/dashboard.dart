@@ -6,7 +6,7 @@ import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan8.dart';
 import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan9.dart';
 import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan10.dart';
 import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan13.dart';
-
+import 'package:mobileprogramming_pertemuan6/pertemuan/pertemuan14.dart';
 
 class DashboardPage extends StatelessWidget {
   final List<Map<String, dynamic>> menuItems = [
@@ -52,6 +52,12 @@ class DashboardPage extends StatelessWidget {
       "color": Colors.red,
       "page": AudioVideo(),
     },
+    {
+      "title": "Pertemuan 14",
+      "icon": Icons.auto_stories,
+      "color": Colors.blue,
+      "page": MapDirectionScreen(),
+    },
   ];
 
   @override
@@ -61,21 +67,22 @@ class DashboardPage extends StatelessWidget {
 
       appBar: AppBar(
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(24),
-          ),
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(24)),
         ),
         elevation: 0,
         backgroundColor: Colors.blueAccent,
-        title: const Text('Dashboard', style: TextStyle(fontWeight: FontWeight.bold)),
+        title: const Text(
+          'Dashboard',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
         actions: [
           // === Option Menu di AppBar ===
           PopupMenuButton<String>(
             onSelected: (value) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text("Option dipilih: $value")),
-              );
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(SnackBar(content: Text("Option dipilih: $value")));
             },
             itemBuilder: (context) => [
               const PopupMenuItem(
@@ -187,9 +194,9 @@ class DashboardPage extends StatelessWidget {
       floatingActionButton: PopupMenuButton<String>(
         icon: const Icon(Icons.add_circle, size: 56, color: Colors.blueAccent),
         onSelected: (value) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("FAB option: $value")),
-          );
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text("FAB option: $value")));
         },
         itemBuilder: (context) => [
           const PopupMenuItem(
@@ -228,12 +235,12 @@ class DashboardPage extends StatelessWidget {
   }
 
   Widget _buildMenuCard(
-      BuildContext context, {
-        required String title,
-        required IconData icon,
-        required Color color,
-        required VoidCallback onTap,
-      }) {
+    BuildContext context, {
+    required String title,
+    required IconData icon,
+    required Color color,
+    required VoidCallback onTap,
+  }) {
     return Material(
       color: Colors.white,
       borderRadius: BorderRadius.circular(20),
@@ -259,7 +266,10 @@ class DashboardPage extends StatelessWidget {
               Text(
                 title,
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ],
           ),
